@@ -17,10 +17,15 @@ A lightweight Ethereum wallet Chrome extension using React and ethers.js — cap
 - EIP-1193 Provider Injection (for dApp compatibility)
 
 
-## 🧩 Dependencies
+## 🔧 Key Dependencies
 
-This project uses the following main packages:
+This wallet extension is built with the following core libraries:
 
-- **ethers**: Used to generate Ethereum wallets (`Wallet.createRandom()`), access address, private key, and mnemonic.
-- **Tailwind CSS**: Used for building the responsive UI of the Chrome extension popup.
-- **React**: Core library for building components and UI.
+| Package          | Purpose |
+|------------------|---------|
+| `react`          | UI framework for building the extension interface. |
+| `ethers`         | Used to generate wallets and sign Ethereum transactions. |
+| `tailwindcss`    | Utility-first CSS for styling a responsive wallet popup. |
+| `postcss`        | CSS processor used by Tailwind during build time. |
+| `autoprefixer`   | Automatically applies browser prefixes for consistent rendering. |
+
