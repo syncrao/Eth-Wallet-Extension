@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Ethereum Wallet",
+  "name": "SyncRao Wallet",
   "version": "1.0",
   "description": "Simple Ethereum wallet built with React and ethers.js",
   "action": {
