@@ -23,7 +23,6 @@ This wallet extension is built with the following core libraries:
 
 | Package          | Purpose |
 |------------------|---------|
-| `react`          | UI framework for building the extension interface. |
 | `ethers`         | Used to generate wallets and sign Ethereum transactions. |
 | `tailwindcss`    | Utility-first CSS for styling a responsive wallet popup. |
 | `postcss`        | CSS processor used by Tailwind during build time. |
