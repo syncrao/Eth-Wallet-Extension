@@ -24,6 +24,7 @@ This wallet extension is built with the following core libraries:
 | Package          | Purpose |
 |------------------|---------|
 | `ethers`         | Used to generate wallets and sign Ethereum transactions. |
+| `crypto-js`      | Used to securely save encrypted wallet details . |
 | `tailwindcss`    | Utility-first CSS for styling a responsive wallet popup. |
 | `postcss`        | CSS processor used by Tailwind during build time. |
 | `autoprefixer`   | Automatically applies browser prefixes for consistent rendering. |
