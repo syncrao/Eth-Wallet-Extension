@@ -35,9 +35,9 @@ const App = () => {
 
   return (
     <WalletContext.Provider value={{ refreshMnemonic, setWallet, wallet }}>
-      <div className="flex justify-center items-start bg-gray-100 p-2">
-        <div className="w-[360px] h-[650px] overflow-y-auto">
-          <div className="flex items-center justify-between px-4 py-2 bg-white shadow rounded-t-xl">
+      <div className="flex justify-center items-start ">
+        <div className="w-[360px] h-[600px] bg-gray-200 p-2 overflow-y-auto">
+          <div className="flex items-center justify-between px-4 py-2  shadow ">
             <h1 className="text-lg font-bold text-gray-800">SyncRao Wallet</h1>
             {wallet && (<button onClick={handleDelete} className="text-red-500 hover:text-red-600 transition"> Sign Out </button>)}
           </div>
