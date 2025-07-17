@@ -18,8 +18,8 @@ const Password = () => {
 
 
     return (
-        <div ><input ref={passwordRef} type="password" className="my-4 font-bold p-4 mx-1 w-[98%] h-12 rounded" placeholder="Enter Password" />
-            <button onClick={handleUnlock} type="button" className="mx-1 w-[98%] bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" > Unlock </button>
+        <div ><input ref={passwordRef} type="password" className="w-full font-bold p-4  h-12 rounded my-4" placeholder="Enter Password" />
+            <button onClick={handleUnlock} type="button" className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" > Unlock </button>
             {error && <p className="text-red-600 text-sm mt-1">{error}</p>}
         </div>
     )

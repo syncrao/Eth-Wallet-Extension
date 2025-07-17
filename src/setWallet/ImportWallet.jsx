@@ -41,10 +41,10 @@ const ImportWallet = () => {
   };
 
   return (
-    <div className="space-y-2">
-      <textarea ref={inputRef} onFocus={() => setError('')} rows={3} placeholder="Enter mnemonic phrase or private key" className="border rounded p-2 text-sm ml-[1%] w-[98%]" />
-      <input ref={passwordRef} onFocus={() => setError('')} type="password" className="border my-2 font-bold p-4 mx-1 w-[98%] h-12 rounded" placeholder="Enter Password" />
-      <input ref={confirmPasswordRef} onFocus={() => setError('')} type="password" className="border my-2 font-bold p-4 mx-1 w-[98%] h-12 rounded" placeholder="Confirm Password" />
+    <div className="space-y-4">
+      <textarea ref={inputRef} onFocus={() => setError('')} rows={3} placeholder="Enter mnemonic phrase or private key" className="border rounded p-2 text-sm my-2 w-full" />
+      <input ref={passwordRef} onFocus={() => setError('')} type="password" className="border my-2 font-bold p-4 w-full h-12 rounded" placeholder="Enter Password" />
+      <input ref={confirmPasswordRef} onFocus={() => setError('')} type="password" className="border my-0 font-bold p-4 w-full h-12 rounded" placeholder="Confirm Password" />
       {error && <p className="mx-2 text-red-600 text-sm mt-1">{error}</p>}
       <button onClick={handleSave} className="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Import Wallet</button>
     </div>

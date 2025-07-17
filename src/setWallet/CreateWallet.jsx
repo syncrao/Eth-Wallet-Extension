@@ -41,10 +41,10 @@ const CreateWallet = () => {
           <div className="my-2 bg-white border border-gray-300 rounded-xl p-4 mt-4 shadow-sm">
             <p className="text-gray-700 font-mono whitespace-pre-wrap break-words">{wallet.mnemonic}</p>
           </div>
-          <input ref={passwordRef} onFocus={() => setError(null)} type="password" className="border  my-2 font-bold p-4 mx-1 w-[98%] h-12 rounded" placeholder="Enter Password" />
-          <input ref={confirmPasswordRef} onFocus={() => setError(null)} type="password" className="border my-2 font-bold p-4 mx-1 w-[98%] h-12 rounded" placeholder="Confirm Password" />
+          <input ref={passwordRef} onFocus={() => setError(null)} type="password" className="border  my-2 font-bold p-4 w-full h-12 rounded" placeholder="Enter Password" />
+          <input ref={confirmPasswordRef} onFocus={() => setError(null)} type="password" className="border my-2 font-bold p-4 w-full h-12 rounded" placeholder="Confirm Password" />
           {error && <p className=" mx-2 text-red-600 text-sm mt-1">{error}</p>}
-          <button onClick={handleSave} className="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"> Save Wallet </button>
+          <button onClick={handleSave} className="w-full my-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"> Save Wallet </button>
         </div>
         :
         <button onClick={handleCreate} className="w-full bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Generate Wallet</button>}
