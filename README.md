@@ -9,6 +9,7 @@ A lightweight Ethereum wallet Chrome extension using React and ethers.js — cap
 - ⚛️ Built using React + ethers.js
 - 🧩 Chrome Extension (Manifest v3 compatible)
 - 🧼 Minimal UI, easy to extend with token transfers, signing, etc.
+- 🧼 test wallet with balance : (funny report blush unveil gadget leopard unaware relax eager auto despair luxury)
 
 ## 🔧 Tech Stack
 - React.js

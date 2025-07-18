@@ -38,7 +38,7 @@ const App = () => {
       <div className="flex justify-center items-start ">
         <div className="w-[360px] h-[600px] bg-white p-2 overflow-y-auto">
           <div className="w-full flex justify-between items-center px-4">
-            <img src="https://images.seeklogo.com/logo-png/30/1/ethereum-logo-png_seeklogo-308497.png" class="w-8 h-8" alt="Ethereum" />
+            <img src="https://images.seeklogo.com/logo-png/30/1/ethereum-logo-png_seeklogo-308497.png" className="w-8 h-8" alt="Ethereum" />
             <h1 className='text-sm font-bold text-gray-600'>SyncRao</h1>
             {wallet && (<button onClick={handleDelete} className=" text-red-500 hover:text-red-600 transition border rounded"> <img src='delete.png' class="w-4 h-4 m-1" alt="Delete" /> </button>)}
           </div>
