@@ -19,7 +19,7 @@ const App = () => {
       } else {
         setWallet(Wallet.fromPhrase(mnemonic))
       }
-    }else {
+    } else {
       setWallet(mnemonic)
     }
   };
@@ -36,12 +36,14 @@ const App = () => {
   return (
     <WalletContext.Provider value={{ refreshMnemonic, setWallet, wallet }}>
       <div className="flex justify-center items-start ">
-        <div className="w-[360px] h-[600px] bg-gray-200 p-2 overflow-y-auto">
-          <div className="flex items-center justify-between px-4 py-2  shadow ">
-            <h1 className="text-lg font-bold text-gray-800">SyncRao Wallet</h1>
-            {wallet && (<button onClick={handleDelete} className="text-red-500 hover:text-red-600 transition"> Sign Out </button>)}
+        <div className="w-[360px] h-[600px] bg-white p-2 overflow-y-auto">
+          <div className="w-full flex justify-between items-center px-4">
+            <img src="https://images.seeklogo.com/logo-png/30/1/ethereum-logo-png_seeklogo-308497.png" class="w-8 h-8" alt="Ethereum" />
+            <h1 className='text-sm font-bold text-gray-600'>SyncRao</h1>
+            {wallet && (<button onClick={handleDelete} className=" text-red-500 hover:text-red-600 transition border rounded"> <img src='delete.png' class="w-4 h-4 m-1" alt="Delete" /> </button>)}
           </div>
           {wallet ? wallet === "WrongPassword" ? <Password /> : <Account /> : <SetWallet />}
+          <footer target="_blank" rel="noopener noreferrer" className="absolute bottom-0 left-0 w-full text-center text-xs text-gray-600 py-2 border-t bg-white">Developed by - Shah Rukh Rao</footer>
         </div>
       </div>
     </WalletContext.Provider>
