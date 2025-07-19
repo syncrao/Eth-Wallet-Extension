@@ -19,9 +19,7 @@ const Account = () => {
         const fallbackProvider = new FallbackProvider([
           { provider: new JsonRpcProvider("https://rpc-sepolia.rockx.com"), priority: 1 },
           { provider: new JsonRpcProvider("https://1rpc.io/sepolia"), priority: 2 },
-          { provider: new JsonRpcProvider("https://ethereum-sepolia.publicnode.com"), priority: 3 },
-          { provider: new JsonRpcProvider("https://sepolia.drpc.org"), priority: 4 },
-          { provider: new JsonRpcProvider("https://sepolia.rpc.hypersync.xyz"), priority: 5 },
+          { provider: new JsonRpcProvider("https://sepolia.drpc.org"), priority: 3 },
         ]);
         const balance = await fallbackProvider.getBalance(address);
         console.log(balance)
