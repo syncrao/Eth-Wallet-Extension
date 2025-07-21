@@ -49,7 +49,6 @@ To use or test the extension without building locally:
 | `ethers.js`      | Ethereum JS library for wallet & txns   |
 | `TailwindCSS`    | Utility-first CSS styling               |
 | `crypto-js`      | Wallet encryption and local storage     |
-| `Chrome APIs`    | Extension logic via Manifest v3         |
 | `PostCSS`        | Tailwind build step                     |
 | `Autoprefixer`   | Adds cross-browser compatibility        |
 
