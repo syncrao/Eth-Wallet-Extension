@@ -44,6 +44,7 @@ const CreateWallet = (props) => {
   return (
     <div className="space-y-2">
       <div className="w-full h-[500px] p-4 bg-white flex flex-col justify-between">
+        <button onClick={() => props.setMode(null)}><img src='back.png' alt='back' /></button>
         <div>
           <h2 className="text-lg font-bold text-gray-800 text-center mb-4"> Your Secret Recovery Phrase</h2>
           <p className="text-sm text-gray-600 text-center mb-4">
@@ -61,7 +62,7 @@ const CreateWallet = (props) => {
         <input ref={passwordRef} onFocus={() => setError(null)} type="password" className="border  my-2 font-bold p-4 w-full h-12 rounded" placeholder="Enter Password" />
         <input ref={confirmPasswordRef} onFocus={() => setError(null)} type="password" className="border my-2 font-bold p-4 w-full h-12 rounded" placeholder="Confirm Password" />
         {error && <p className=" mx-2 text-red-600 text-sm mt-1">{error}</p>}
-        <button onClick={handleSave} className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-full transition"> Continue </button>
+        <button onClick={handleSave} className="mt-2 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-full transition"> Continue </button>
       </div>
       <p className="text-sm text-gray-500 mt-4 text-center">  Already have a recovery phrase?{" "} <button onClick={() => props.setMode('import')} className="text-blue-600 hover:underline font-medium" > Import Wallet </button> </p>
     </div>

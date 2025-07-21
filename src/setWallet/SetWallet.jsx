@@ -34,10 +34,6 @@ const Wallet = () => {
                             Import Wallet
                         </button>
                     </p>
-                    <p className="text-sm text-gray-500 mt-2"><span className="text-sm text-gray-800 mt-4">for test use: </span>
-                     funny report blush unveil gadget leopard unaware relax eager auto despair luxury
-                    </p>
-
                 </div>}
         </>
     );

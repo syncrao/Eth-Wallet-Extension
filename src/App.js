@@ -43,7 +43,10 @@ const App = () => {
             {wallet && (<button onClick={handleDelete} className=" text-red-500 hover:text-red-600 transition border rounded"> <img src='delete.png' class="w-4 h-4 m-1" alt="Delete" /> </button>)}
           </div>
           {wallet ? wallet === "WrongPassword" ? <Password /> : <Account /> : <SetWallet />}
-          <footer target="_blank" rel="noopener noreferrer" className="absolute bottom-0 left-0 w-full text-center text-xs text-gray-600 py-2 border-t bg-white">Developed by - Shah Rukh Rao</footer>
+          <footer className="absolute bottom-0 left-0 w-full text-center text-xs text-gray-600 py-2 border-t bg-white">
+            <p>Developed by - Shah Rukh Rao</p>
+            <p className="text-red-500 font-semibold mt-1">This wallet works only on Sepolia Testnet</p>
+          </footer>
         </div>
       </div>
     </WalletContext.Provider>

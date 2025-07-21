@@ -21,11 +21,7 @@ const decryptMnemonic = (encrypted, password) => {
     const decrypted = bytes.toString(CryptoJS.enc.Utf8);
     if (decrypted) {
       const wallet = Wallet.fromPhrase(decrypted)
-      return {
-        address: wallet.address,
-        privateKey: wallet.privateKey,
-        mnemonic: wallet.mnemonic.phrase,
-      }
+      return wallet
     } else {
       return "WrongPassword";
     }

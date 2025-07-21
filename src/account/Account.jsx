@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useWallet } from "../App";
 import { FallbackProvider, formatEther, JsonRpcProvider } from "ethers";
 import SendEther from "./SendEther";
+import CoinTable from "../components/CoinPricesTable";
 
 
 const Account = () => {
@@ -17,7 +18,7 @@ const Account = () => {
       setLoading(true);
       try {
         const fallbackProvider = new FallbackProvider([
-          { provider: new JsonRpcProvider("https://rpc-sepolia.rockx.com"), priority: 1 },
+          // { provider: new JsonRpcProvider("https://rpc-sepolia.rockx.com"), priority: 1 },
           { provider: new JsonRpcProvider("https://1rpc.io/sepolia"), priority: 2 },
           { provider: new JsonRpcProvider("https://sepolia.drpc.org"), priority: 3 },
         ]);
@@ -36,23 +37,21 @@ const Account = () => {
   }, []);
 
   return (
-    <> {mode === "send" ? <SendEther /> :
+    <> {mode === "send" ? <SendEther setMode={setMode} account={account} /> : <>
       <div className="max-w-md mx-auto mt-6 p-4 bg-white rounded-2xl shadow-md space-y-4 border border-gray-200">
         <h2 className="text-xl font-semibold text-gray-800 text-center">Wallet Details</h2>
         <div className="flex flex-col space-y-1">
           <p className="text-sm text-gray-500">Address</p>
-          <p className="font-mono text-sm break-words bg-gray-100 rounded-md p-2 text-gray-700">
-            {wallet.address}
-          </p>
+          <p className="font-mono text-sm break-words bg-gray-100 rounded-md p-2 text-gray-700"> {wallet.address}</p>
         </div>
-
         <div className="flex flex-col space-y-1">
           <p className="text-sm text-gray-500">Balance</p>
-          <p className="font-mono text-lg font-semibold text-green-600">
-            {account.balance} ETH  {loading && "Loading ..."}
-          </p>
+          <p className="font-mono text-lg font-semibold text-green-600"> {account.balance} ETH  {loading && "Loading ..."} </p>
         </div>
-      </div>}
+        <button onClick={() => setMode("send")} className="w-full bg-blue-600 text-white rounded p-2 disabled:opacity-50" > Send ETH </button>
+      </div>
+      <CoinTable />
+      </>}
     </>
   )
 }

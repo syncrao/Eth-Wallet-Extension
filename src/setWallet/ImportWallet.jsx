@@ -42,8 +42,10 @@ const ImportWallet = ({ setMode }) => {
 
   return (
     <div className="space-y-2">
+      
       <div className=" w-full h-[430px] mt-6 p-4 bg-white flex flex-col justify-between">
         <div>
+          <button onClick={() => setMode(null)}><img src='back.png' alt='back' /></button>
           <h2 className="text-lg font-bold text-gray-800 text-center mb-4"> Import Your Wallet </h2>
           <p className="text-sm text-gray-600 text-center mb-4"> Paste your 12-word recovery phrase below to access your wallet.</p>
           <textarea ref={inputRef} onFocus={() => setError('')} rows={3} placeholder="Enter 12-word recovery phrase" className="border rounded p-3 text-sm w-full resize-none" />
