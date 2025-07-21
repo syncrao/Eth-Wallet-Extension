@@ -1,32 +1,65 @@
-# Ethereum Wallet Extension 🔐
+# 🦊 Ethereum Wallet Extension 🔐
 
-A lightweight Ethereum wallet Chrome extension using React and ethers.js — capable of generating wallets, sending transactions, and connecting with decentralized applications (dApps) via an injected provider.
+A lightweight Ethereum wallet Chrome extension built with **React** and **ethers.js** — generate wallets, send ETH, and connect to dApps via EIP-1193 injected provider.
+
+---
 
 ## ✅ Features
-- 🔐 Generate new Ethereum wallet (address, private key, mnemonic)
-- 💸 Send ETH transactions to any valid Ethereum address
-- 🌐 Connect with dApps (EIP-1193 provider-compatible injection)
+
+- 🔐 Generate new Ethereum wallet (Address, Private Key, Mnemonic)
+- 💸 Send ETH transactions to any Ethereum address
+- 🌐 Injected provider to connect with dApps (EIP-1193 compatible)
 - ⚛️ Built using React + ethers.js
 - 🧩 Chrome Extension (Manifest v3 compatible)
-- 🧼 Minimal UI, easy to extend with token transfers, signing, etc.
-- 🧼 test wallet with balance : (funny report blush unveil gadget leopard unaware relax eager auto despair luxury)
+- 🎨 TailwindCSS-powered minimal UI
+- 🧪 Test wallet included (Sepolia Testnet only)
 
-## 🔧 Tech Stack
-- React.js
-- ethers.js
-- Chrome Extension APIs (Manifest v3)
-- EIP-1193 Provider Injection (for dApp compatibility)
+---
+
+## 🧪 Test Wallet (Sepolia)
+
+> Use the following **test wallet seed phrase** on Sepolia network:
+> ## funny report blush unveil gadget leopard unaware relax eager auto despair luxury
+
+> ⚠️ This wallet works **only on Sepolia Testnet**  
+> 🚫 Do **not** use this seed phrase on Ethereum Mainnet
+
+---
+
+## 📦 Download Build
+
+To use or test the extension without building locally:
+
+> [📥 Download Build Folder (zip)](https://github.com/syncrao/Eth-Wallet-Extension/releases/download/v1.0.0/build.zip)
+
+### 🧩 Load in Chrome
+
+1. Go to `chrome://extensions`
+2. Enable **Developer Mode**
+3. Click **Load Unpacked**
+4. Select the extracted `build/` folder
+
+---
+
+## 🛠 Tech Stack
+
+| Technology       | Description                             |
+|------------------|-----------------------------------------|
+| `React.js`       | Frontend framework for building UI      |
+| `ethers.js`      | Ethereum JS library for wallet & txns   |
+| `TailwindCSS`    | Utility-first CSS styling               |
+| `crypto-js`      | Wallet encryption and local storage     |
+| `Chrome APIs`    | Extension logic via Manifest v3         |
+| `PostCSS`        | Tailwind build step                     |
+| `Autoprefixer`   | Adds cross-browser compatibility        |
+
+---
+
+## 👨‍💻 Developed By
+
+**Shah Rukh Rao**
+
+---
 
 
-## 🔧 Key Dependencies
-
-This wallet extension is built with the following core libraries:
-
-| Package          | Purpose |
-|------------------|---------|
-| `ethers`         | Used to generate wallets and sign Ethereum transactions. |
-| `crypto-js`      | Used to securely save encrypted wallet details . |
-| `tailwindcss`    | Utility-first CSS for styling a responsive wallet popup. |
-| `postcss`        | CSS processor used by Tailwind during build time. |
-| `autoprefixer`   | Automatically applies browser prefixes for consistent rendering. |
 
