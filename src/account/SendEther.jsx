@@ -29,11 +29,11 @@ const SendEther = (props) => {
     setLoading(false);
   };
 
-  return (
+  return (<>
+    <button onClick={() => props.setMode(null)} > <img src="back.png" alt="back" className="inline mt-1 p-2" /></button>
     <div className="max-w-md mx-auto mt-6 p-4 bg-white rounded-2xl shadow border space-y-4">
       <h2 className="text-xl font-semibold text-center text-gray-800">Send ETH</h2>
       <div className="space-y-2">
-        <button onClick={() => props.setMode(null)} > <img src="back.png" alt="back" className="inline" /></button>
         <div className="flex items-center space-x-2">
           <input type="text" placeholder="Recipient Address" value={to} onChange={(e) => setTo(e.target.value)} className="w-full p-2 border rounded" />
         </div>
@@ -45,9 +45,8 @@ const SendEther = (props) => {
         )}
         {error && <p className="text-red-600 text-sm">{error}</p>}
       </div>
-
     </div>
-  );
+  </>);
 };
 
 export default SendEther;
